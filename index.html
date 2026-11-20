@@ -17,7 +17,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 <input id="pw" type="password" autocomplete="current-password" placeholder="Password" autofocus required>
 <button>Open</button><p id="msg" role="status"></p></form>
 <script>
-const SALT = 'vJQGjU4cA/W7TDJBu7ZUAQ==', ROUNDS = 600000;
+const SALT = 'ni/ATtUGty281y2/YSPhBQ==', ROUNDS = 600000;
 const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 async function keyFrom(pw) {
   const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']);
